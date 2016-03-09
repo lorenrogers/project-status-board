@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Name:</strong>
   <%= @project.name %>
@@ -7,7 +5,11 @@
 
 <p>
   <strong>Status:</strong>
-  <%= @project.status.name unless @project.status == nil %>
+  <% if @project.status %>
+    <span style="background-color:<%=@project.status.color%>">
+      <%= @project.status.name %>
+    </span>
+  <% end %>
 </p>
 
 <p>

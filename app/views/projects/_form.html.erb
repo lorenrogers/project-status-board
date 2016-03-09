@@ -3,7 +3,9 @@
 
   <div class="form-inputs">
     <%= f.input :name %>
-    <%= collection_select(f, :status_id, Status.all, :id, :name) %>
+    <%= f.input :state do %>
+      <%= f.collection_select :status_id, Status.order(:name), :id, :name %>
+    <% end %>
     <%= f.input :description %>
   </div>
 
