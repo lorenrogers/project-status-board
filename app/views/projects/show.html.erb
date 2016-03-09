@@ -7,7 +7,7 @@
 
 <p>
   <strong>Status:</strong>
-  <%= @project.status %>
+  <%= @project.status.name unless @project.status == nil %>
 </p>
 
 <p>

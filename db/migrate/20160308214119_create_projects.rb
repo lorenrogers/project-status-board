@@ -2,8 +2,8 @@ class CreateProjects < ActiveRecord::Migration
   def change
     create_table :projects do |t|
       t.string :name
-      t.string :status
       t.text :description
+      t.integer :status_id
 
       t.timestamps null: false
     end
