@@ -41,6 +41,10 @@ class StatusesController < ApplicationController
 
   # DELETE /statuses/1
   def destroy
+    if @status.project.count != 0
+      redirect_to statuses_url, alert: 'Cannot destroy statuses that are assigned.'
+      return
+    end
     @status.destroy
     redirect_to statuses_url, notice: 'Status was successfully destroyed.'
   end
