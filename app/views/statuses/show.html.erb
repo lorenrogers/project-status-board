@@ -6,12 +6,23 @@
 
 <p>
   <strong>Color:</strong>
-  <%= @status.color %>
+  <span style="background-color:<%=@status.color%>">
+    <%= @status.color %>
+  </span>
 </p>
 
 <p>
   <strong>Description:</strong>
   <%= @status.description %>
+</p>
+
+<h2>Associated Projects</h2>
+<p>
+<ul>
+  <% @status.project.each do |p| %>
+    <li><%= link_to p.name, p%></li>
+  <% end %>
+</ul>
 </p>
 
 <%= link_to 'Edit', edit_status_path(@status) %> |
