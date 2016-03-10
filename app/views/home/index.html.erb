@@ -1,9 +1,15 @@
 <section class="wrapper">
+<ul class="project-list">
   <% Project.all.each do |p| %>
-    <button class="block" style="background-color:<%= p.status.color %>">
-      <%= link_to "#{p.name}: #{p.status.name}", p %>
-    </button>
+    <li class="block" style="background-color:<%= p.status.color %>">
+      <%= link_to p do %>
+        <div class="project-list-item">
+          <%= p.name %>: <%= p.status.name %>
+          <div>
+          <% end %>
+    </li>
   <% end %>
+</ul>
 </section>
 <section>
   <hr>

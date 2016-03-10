@@ -2,10 +2,14 @@
 @import "base/grid-settings";
 @import "neat";
 
-.block {
-  @include span-columns(2);
-  @include omega(6n);
-  margin-bottom: 1rem;
+ul.project-list {
+  li.block {
+    @include span-columns(3);
+    @include omega(4n);
+    margin-bottom: 1rem;
+    @include border-top-radius(20px);
+    @include border-bottom-radius(20px);
+  }
 }
 
 .wrapper {
