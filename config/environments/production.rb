@@ -1,5 +1,11 @@
 #require Rails.root.join("config/smtp")
 Rails.application.configure do
+
+  # Basic authentication
+  config.middleware.insert_before(::Rack::Runtime, "::Rack::Auth::Basic", "Staging") do |u, p|
+    u == 'awesome' && p == 'sauce'
+  end
+
   #if ENV.fetch("HEROKU_APP_NAME", "").include?("staging-pr-")
   #  ENV["APPLICATION_HOST"] = ENV["HEROKU_APP_NAME"] + ".herokuapp.com"
   #end
