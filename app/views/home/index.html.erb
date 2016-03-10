@@ -1,3 +1,12 @@
-<h1>Project Status Dashboard</h1>
-<p><%=link_to 'Projects', projects_path%></p>
-<p><%=link_to 'Statuses', statuses_path%></p>
+<section class="wrapper">
+  <% Project.all.each do |p| %>
+    <button class="block" style="background-color:<%= p.status.color %>">
+      <%= link_to "#{p.name}: #{p.status.name}", p %>
+    </button>
+  <% end %>
+</section>
+<section>
+  <hr>
+  <%=link_to 'New Project', new_project_path, class: 'button'%>
+  <%=link_to '(Statuses)', statuses_path%>
+</section>
