@@ -4,6 +4,13 @@ This is a quick sketch rails app that shows multiple project statuses
 for a team. I started in on it for my own practice -- figured I'd share
 the result in case others were interested.
 
+Check out a demo of it here:
+
+[project-status-board.herokuapp.com](https://project-status-board.herokuapp.com/)
+
+user = awesome
+pass = sauce
+
 ## Getting Started
 
 After you have cloned this repo, run this setup script to set up your machine
