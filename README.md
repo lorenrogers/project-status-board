@@ -1,5 +1,9 @@
 # Project-status-board
 
+This is a quick sketch rails app that shows multiple project statuses
+for a team. I started in on it for my own practice -- figured I'd share
+the result in case others were interested.
+
 ## Getting Started
 
 After you have cloned this repo, run this setup script to set up your machine
